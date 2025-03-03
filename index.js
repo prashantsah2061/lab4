@@ -10,7 +10,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const hits = {};
 
-// API to track page visits
+
 app.get('/hits/:pageId', (req, res) => {
     const pageId = req.params.pageId;
     hits[pageId] = (hits[pageId] || 0) + 1;
